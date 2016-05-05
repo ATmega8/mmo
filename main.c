@@ -7,6 +7,7 @@ int main(void)
 	UnityBegin("matrix test");
 	RunMatrixTest();
 	RunMatrixAddTest();
+	RunMatrixSubTest();
 	return(UnityEnd());
 }
 
