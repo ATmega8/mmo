@@ -27,6 +27,7 @@ extern MATRIX_DATATYPE MATRIX_GetData(const MATRIX_TypeDef* matrix,
 void MATRIX_SetArrayData(MATRIX_TypeDef* matrix, void* data);
 
 void MATRIX_Add(MATRIX_TypeDef* A, const MATRIX_TypeDef* B);
+void MATRIX_Sub(MATRIX_TypeDef* A, const MATRIX_TypeDef* B);
 
 #define MATRIX_ASSERT(expr) ((expr) ? (void)0 : MATRIX_AssertFailed(__FILE__, __LINE__))
 void MATRIX_AssertFailed(const char* file, uint32_t line);
