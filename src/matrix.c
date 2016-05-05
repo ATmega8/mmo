@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdint.h>
+#include <string.h>
 #include <stdlib.h>
 
 #include "matrix.h"
@@ -39,6 +40,14 @@ inline MATRIX_DATATYPE MATRIX_GetData(const MATRIX_TypeDef* matrix,
 	MATRIX_ASSERT((col >= 0) && (col < matrix->colCount));
 
 	return *(matrix->pdata	+ matrix->colCount*row + col);
+}
+
+void MATRIX_SetArrayData(MATRIX_TypeDef* matrix, void* data)
+{
+	MATRIX_ASSERT(matrix != NULL);
+
+	memcpy(matrix->pdata, data, sizeof(MATRIX_DATATYPE)
+			*(matrix->rowCount)*(matrix->colCount));
 }
 
 void MATRIX_AssertFailed(const char* file, uint32_t line)
