@@ -29,6 +29,10 @@ void MATRIX_SetArrayData(MATRIX_TypeDef* matrix, void* data);
 void MATRIX_Add(MATRIX_TypeDef* A, const MATRIX_TypeDef* B);
 void MATRIX_Sub(MATRIX_TypeDef* A, const MATRIX_TypeDef* B);
 
+void MATRIX_Mul(MATRIX_DATATYPE a, MATRIX_TRANS_TypeDef TA, MATRIX_TypeDef* A,
+					MATRIX_TRANS_TypeDef TB, MATRIX_TypeDef* B,
+							MATRIX_DATATYPE b, MATRIX_TypeDef* C);
+
 #define MATRIX_ASSERT(expr) ((expr) ? (void)0 : MATRIX_AssertFailed(__FILE__, __LINE__))
 void MATRIX_AssertFailed(const char* file, uint32_t line);
 
