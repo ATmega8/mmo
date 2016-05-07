@@ -11,7 +11,7 @@ typedef struct
 
 typedef enum
 {
-	MartixNoTrans,
+	MatrixNoTrans,
 	MatrixTrans
 } MATRIX_TRANS_TypeDef;
 
