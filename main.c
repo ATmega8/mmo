@@ -9,6 +9,7 @@ int main(void)
 	RunMatrixAddTest();
 	RunMatrixSubTest();
 	RunMatrixMulTest();
+	RunMatrixInvTest();
 	return(UnityEnd());
 }
 
